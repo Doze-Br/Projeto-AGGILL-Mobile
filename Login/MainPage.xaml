@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Mobile.Login"
+             x:Class="Mobile.MainPage">
+
+    <StackLayout>
+        <RelativeLayout Grid.Row="1"
+                        Margin="10">
+            <Label Text="Login"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="FillAndExpand"
+               TextColor="Black"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=140}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}"/>
+            <Entry
+                   x:Name="EmailEntry"
+                   IsSpellCheckEnabled="False"
+                   ClearButtonVisibility="Never"
+                   Keyboard="Email"
+                   Placeholder="Email"
+                   WidthRequest="330"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.18}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=20}"
+                   BackgroundColor="#e3e3e8"
+                   FontAttributes="Bold"
+                   ReturnType="Default"
+                   TextColor="Gray"
+                   MaxLength="33">
+                <Entry.Behaviors>
+                    <local:EmailValidation/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry 
+                   x:Name="PasswordEntry"
+                   IsPassword="True"
+                   Placeholder="Password"
+                   WidthRequest="330"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.32}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=20}"
+                   BackgroundColor="#e3e3e8"
+                   FontAttributes="Bold"
+                   MaxLength="33"
+                   >
+            </Entry>
+            <Label 
+                   x:Name="ErrorMessagePassword"
+                   WidthRequest="330"
+                   Text="O campo de senha não pode ser vazio!"
+                   TextColor="DarkRed"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.39}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=20}"
+                   BackgroundColor="Transparent"
+                   FontAttributes="Bold"
+                   IsVisible="false">
+            </Label>
+            <Label 
+                   x:Name="ErrorMessageEmail"
+                   WidthRequest="330"
+                   Text="O campo de email não pode ser vazio!"
+                   TextColor="DarkRed"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.25}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=20}"
+                   BackgroundColor="Transparent"
+                   FontAttributes="Bold"
+                   IsVisible="false">
+            </Label>
+            <Button 
+                    Clicked="Efetuar_Login"
+                    Text="Login"
+                    CornerRadius="5"
+                    BackgroundColor="#000066"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.50}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=20}"
+                    WidthRequest="330"
+                >
+            </Button>
+            <Button Text="Esqueci a Senha"
+                    FontSize="Medium"
+                    CornerRadius="5"
+                    BackgroundColor="Transparent"
+                    TextColor="#000066"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.581}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=160}">
+            </Button>
+            <Button Text="Cadastrar-se"
+                    CornerRadius="5"
+                    BackgroundColor="#000066"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.85}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=19}"
+                    WidthRequest="190">
+            </Button>
+            <ImageButton
+            CornerRadius="17"
+            Padding="-10"
+            Aspect="AspectFill"
+            BackgroundColor="Transparent"
+            HeightRequest="50"
+            Source="https://www.pngkey.com/png/detail/190-1905516_login-with-facebook-button-png-clip-black-and.png"
+            WidthRequest="180"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.68}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=19}">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+            <ImageButton
+            CornerRadius="60"
+            Padding="-9"
+            Aspect="AspectFill"
+            BackgroundColor="Transparent"
+            HeightRequest="50"
+            Source="https://www.pngkey.com/png/detail/245-2458169_facebook-login-button-google-login-button-google-login.png"
+            WidthRequest="180"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.68}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=210}">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale" Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+            <Label Text="Não possui uma conta?"
+               FontSize="Body"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="FillAndExpand"
+               TextColor="Gray"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=19}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.80}"/>
+            <Grid BackgroundColor="Transparent" Padding="-1" HeightRequest="47" WidthRequest="334"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.321}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=15}"
+                   IsVisible="false">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Close_ErrorEmail"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <Grid 
+                  x:Name="GridPassword"
+                  BackgroundColor="Transparent" Padding="-1" HeightRequest="47" WidthRequest="334"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.321}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=15}"
+                   IsVisible="false">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Close_ErrorPassword"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <Grid 
+                   x:Name="GridEmail"
+                   BackgroundColor="Transparent" Padding="-1" HeightRequest="47" WidthRequest="334"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.18}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=15}"
+                   IsVisible="false">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Close_ErrorEmail"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+        </RelativeLayout>
+    </StackLayout>
+
+</ContentPage>

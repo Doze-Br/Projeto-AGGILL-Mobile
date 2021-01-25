@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="Mobile.Carteira"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.Content>
+        <SwipeView x:Name="MainSwipeView">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItemView>
+                        <RelativeLayout BackgroundColor="#244542" WidthRequest="205" Padding="-1">
+                            <Button
+                        Text="Meu Perfil"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.115}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        WidthRequest="206"
+                        Clicked="Abrir_MeuPerfil">
+                            </Button>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.10}">
+
+                            </BoxView>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.22}">
+
+                            </BoxView>
+                            <Button
+                        Text="O que é Rede Ethereum?"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.24}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        WidthRequest="206"
+                        Clicked="Abrir_Ethereum">
+                            </Button>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.35}">
+
+                            </BoxView>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.46}">
+
+                            </BoxView>
+                            <Button
+                        Text="O que é Bitcoin?"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.355}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        WidthRequest="206"
+                        Clicked="Abrir_Bitcoin">
+                            </Button>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.565}">
+
+                            </BoxView>
+                            <Button
+                        Text="Sobre"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.46}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        WidthRequest="206"
+                        Clicked="Abrir_Sobre">
+                            </Button>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.67}">
+
+                            </BoxView>
+                            <Button
+                        Text="Assistência Técnica"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.57}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        WidthRequest="206"
+                        Clicked="Abrir_Assistencia">
+                            </Button>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="205"
+                                     Margin="0,0,0,0"
+                                     Opacity="0.60"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.78}">
+
+                            </BoxView>
+                            <Button
+                        Text="Fale Conosco"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.68}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        WidthRequest="206"
+                        Clicked="Abrir_FaleConosco">
+                            </Button>
+                            <Button
+                        Text="Log Out"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.83}"
+                        Padding="-1"
+                        HeightRequest="60"
+                        BorderColor="Black"
+                        WidthRequest="206"
+                        >
+                            </Button>
+                            <BoxView BackgroundColor="#851522"
+                                     HeightRequest="170"
+                                     WidthRequest="2"
+                                     Margin="0,0,0,0"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=1}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.785}">
+
+                            </BoxView>
+
+                        </RelativeLayout>
+                    </SwipeItemView>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <StackLayout BackgroundColor="#244542">
+                <Frame BackgroundColor="#465857" CornerRadius="11" Padding="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand">
+                    <RelativeLayout>
+                        <ImageButton Source="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Menu%2C_Web_Fundamentals_%28White%29.svg/1280px-Menu%2C_Web_Fundamentals_%28White%29.svg.png"
+                                 BackgroundColor="Transparent"
+                                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}"
+                                 HeightRequest="30"
+                                 Aspect="AspectFill"
+                                 Padding="-1"
+                                 Clicked="Open_Swipe">
+
+                        </ImageButton>
+                        <Button
+                        Text="Carteira"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=70}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.13}"
+                        Padding="-1"
+                        HeightRequest="20"
+                        >
+                        </Button>
+                        <Button
+                        Text="Transações"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=220}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.13}"
+                        Padding="-1"
+                        HeightRequest="20"
+                        BorderColor="White"
+                        Clicked="Expansão">
+                        </Button>
+                        <Label Text="^"
+                               TextColor="White"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           Padding="-3"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=345}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0001}"
+                           Rotation="180"
+                           HeightRequest="28">
+
+                        </Label>
+                    </RelativeLayout>
+                </Frame>
+                <RelativeLayout>
+                    <RelativeLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FecharExpansão"/>
+                        <TapGestureRecognizer Tapped="Close_Swipe"/>
+                    </RelativeLayout.GestureRecognizers>
+                    <Image Source="Resources/drawable/background.png"
+                       WidthRequest="412"
+                       HeightRequest="642"
+                       Margin="0,-10,0,0"
+                       Aspect="AspectFill"/>
+                    <Grid x:Name="TransactionExpander" IsVisible="false"
+                              BackgroundColor="Transparent"
+                              RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=238}"
+                              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=-0.019}"
+                              HeightRequest="260"
+                              WidthRequest="155">
+                        <BoxView BackgroundColor="#465857" HeightRequest="150" WidthRequest="150" CornerRadius="10">
+                        </BoxView>
+                        <RelativeLayout>
+                            <Label
+                        Text="    Gerar&#10;    Relatório"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.05}"
+                        Padding="-1"
+                        HeightRequest="50"
+                        WidthRequest="140"
+                        >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Abrir_Relatorio"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="155"
+                                     Margin="0,0,0,0"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.27}">
+
+                            </BoxView>
+                            <Label
+                        Text="    Gráfico"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.31}"
+                        Padding="-1"
+                        HeightRequest="36"
+                        WidthRequest="140"
+                        >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Abrir_Grafico"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="155"
+                                     Margin="0,0,0,0"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45}">
+
+                            </BoxView>
+                            <Label
+                        Text="    Opções de&#10;    Mercado"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.47}"
+                        Padding="-1"
+                        HeightRequest="50"
+                        WidthRequest="140"
+                        >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Abrir_Mercado"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="155"
+                                     Margin="0,0,0,0"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.665}">
+
+                            </BoxView>
+                            <Label
+                        Text="    Extrato"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.71}"
+                        Padding="-1"
+                        HeightRequest="36"
+                        WidthRequest="140"
+                        >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Open_Productivity"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <BoxView BackgroundColor="Gray"
+                                     HeightRequest="0.1"
+                                     WidthRequest="155"
+                                     Margin="0,0,0,0"
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.85}">
+
+                            </BoxView>
+                        </RelativeLayout>
+                    </Grid>
+                    <RelativeLayout x:Name="TextoCarteira" >
+                        <Label 
+                       x:Name="ItemsCarteira"
+                       Text="Seu saldo é de: "
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=98}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.10}"
+                       FontSize="Large"
+                       Margin="10,0,100,0">
+                        </Label>
+
+                        <ImageButton Source="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_37-512.png"
+                             BackgroundColor="Transparent"
+                             RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=3}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.030}"
+                             HeightRequest="100"
+                             Aspect="AspectFill"
+                             Padding="-1"
+                             Margin="0,0,0,0"
+                                 >
+                    </ImageButton>
+
+                    <BoxView BackgroundColor="White"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=5}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}"
+                          HeightRequest="300"
+                         WidthRequest="402"
+                         Margin="0,0,0,0"
+                         Opacity="0.10"
+                         CornerRadius="15"
+                         >
+
+                    </BoxView>
+                        <microcharts:ChartView x:Name="Chart1" HeightRequest="285" WidthRequest="385" BackgroundColor="Transparent"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=15}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.21}"
+                         />
+                        <Button Text="Verificar Rendimentos"
+                    CornerRadius="5"
+                    BackgroundColor="#000066"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.80}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=100}"
+                    WidthRequest="200"
+                    Opacity="0.84"
+                    Clicked="Open_Productivity">
+                    </Button>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </StackLayout>
+        </SwipeView>
+    </ContentPage.Content>
+</ContentPage>
